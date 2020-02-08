@@ -1,0 +1,77 @@
+.Home {
+  max-height: 100vh;
+  overflow: hidden;
+
+  &__pokeball-container {
+    width: 100px;
+    margin: 0 auto;
+  }
+  
+  &__hero {
+    background: rgba(#A8414F, .8);
+    clip-path: ellipse(82% 54% at 49% 23%);
+    height: 80vh;
+    margin-bottom: -20vh;
+    color: #fff;
+    padding: 40px;
+
+    & h1 {
+      font-family: 'Poppins', Arial;
+      font-weight: bold;
+      font-size: 120px;
+      line-height: 120px;
+      position: absolute;
+      z-index: 1;
+    }
+
+    & img {
+      opacity: .2;
+      width: 500px;
+      position: absolute;
+      left: -75;
+      bottom: -100;
+    }
+  }
+
+  &__info {
+    height: 24vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 1;
+
+    &-link {
+      width: 100px;
+      text-align: center;
+      margin: 0 auto;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      
+      &-img {
+        width: 100px;
+        margin: -86px auto;
+        z-index: 1;
+        -webkit-filter: drop-shadow(0px 3px 6px rgba(0,0,0,0.5));
+        filter: drop-shadow(0px 3px 6px rgba(0,0,0,0.5));
+      }
+
+      & p {
+        color: #212121;
+        font-family: 'Poppins', arial;
+        margin-top: 23px;
+        font-size: 13px;
+      }
+    }
+
+    &-created {
+      text-align: right;
+      font-family: 'Poppins', Arial;
+      font-weight: bold;
+      color: #212121;
+    }
+
+  }
+}

@@ -1,0 +1,19 @@
+.Card {
+  cursor: pointer;
+
+  &__id {
+    background-color: #ddd;
+    width: 30%;
+    padding: 5px;
+    margin: 5px auto;
+    border-radius: 50px;
+    font-family: 'Poppins', Arial;
+    font-weight: bold;
+    font-size: 13px;
+  }
+
+  &__name {
+    text-transform: capitalize;
+  }
+
+}

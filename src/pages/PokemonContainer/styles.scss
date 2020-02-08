@@ -1,0 +1,99 @@
+.Pokemon {
+  min-height: 100vh;
+  overflow-x: hidden;
+  .Element__name {
+    font-size: 12px;
+  }
+
+  &__hero {
+    &-elements {
+      margin-top: 10px;
+      display: flex;
+    }
+  }
+
+  &__content {
+    margin-top: 80px;
+    background: #fff;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, .16);
+    border-radius: 25px 25px 0 0;
+    padding: 20px 3%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    &-cell-img {
+      grid-column: 1/3;
+      text-align: right;
+      height: 100px;
+      display: flex;
+      justify-content: space-between;
+
+      & h3 {
+        color: rgba(0, 0, 0, .3);
+        font-family: 'Poppins', Arial;
+        font-size: 25px;
+      }
+
+      & img {
+        width: 350px;
+        image-rendering: pixelated;
+        margin-top: -200px;
+      }
+      
+      @media screen and (max-width: 630px) {
+        flex-direction: column;
+        & img {
+          margin-top: -250px;
+        }
+      }
+    }
+
+    &-cell-info {
+      color: #2c2c2c;
+      &.abilities {
+        grid-column: 1/3;
+
+      }
+      @media screen and (max-width: 980px) {
+        grid-column: 1/3;
+      }
+    }
+    
+    @media screen and (max-width: 630px) {
+      margin-top: 150px;
+    }
+
+    & .Stats {
+      width: 100%;
+      border-spacing: 0 10px;
+      &__row {
+        &-name {
+          width: 200px;
+          font-size: 15px;
+          font-family: 'Lato', Arial;
+        }
+      }
+    }
+    
+    & .Information {
+      font-size: 15px;
+      font-family: 'Lato', Arial;
+      width: 100%;
+      border-spacing: 0 10px;
+      &__row {
+        &-name {
+          width: 200px;
+        }
+        &-value {
+          &.name {
+            text-transform: capitalize;
+            font-style: italic;
+          }
+          &.types {
+            display: flex;
+          }
+        }
+      }
+    }
+  }
+}
