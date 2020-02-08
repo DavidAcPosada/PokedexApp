@@ -16,7 +16,7 @@ const Pokemon = (props) => {
       <HeroColored className='Pokemon__hero' type={data.types && data.types[0].type.name}>
         <div className='Pokemon__hero-title'>
             <h3>{data.id &&  data.id.toString().padStart(3, '0')}</h3>
-            <h1>{ data.name }</h1>
+            <h1>{ data.name && data.name.replace(/-/g, ' ') }</h1>
             <div className='Pokemon__hero-elements'>
               {
                 data.types && data.types.map(({type}, index) => {
